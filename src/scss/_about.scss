@@ -1,0 +1,85 @@
+.about {
+  padding-inline: 1.5rem;
+  margin-block: 2rem;
+  gap: 2.7rem;
+
+  @include flex-center;
+  flex-direction: column;
+  .leftSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    div.headshotImg__container {
+      aspect-ratio: 1/1;
+      width: 18rem;
+      background-color: white;
+      overflow: hidden;
+      border-radius: 4px;
+
+      img.headshotImg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    div.backdrop {
+      position: absolute;
+      top: 60%;
+      left: 55%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      width: 18rem;
+      aspect-ratio: 1/1;
+      border: 10px solid $blue;
+    }
+  }
+  .rightSide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    color: white;
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      color: $text-color-grey;
+      font-size: 1.5rem;
+    }
+
+    .buttons {
+      width: 100%;
+      button {
+        font-size: inherit;
+        color: white;
+        border: none;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+      button:nth-child(1) {
+        font: inherit;
+        // background-image: linear-gradient(135deg, #101630, #4c467a, #7a77b2);
+        background-image: linear-gradient(135deg, $blue, #4c467a);
+      }
+      button:nth-child(2) {
+        background: transparent;
+        border: 2px solid white;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    width: 40%;
+    padding: 10px;
+  }
+}

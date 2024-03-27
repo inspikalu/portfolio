@@ -1,0 +1,19 @@
+@import "config";
+
+.hero {
+  width: 100%;
+  min-height: 50vh;
+  margin-block: 1rem;
+  padding-inline: 1.5rem;
+
+  span {
+    font-size: 1.5rem;
+    color: $text-color-grey;
+    font-weight: 500;
+  }
+  h1 {
+    width: 15ch;
+    font-size: 3rem;
+    color: white;
+  }
+}

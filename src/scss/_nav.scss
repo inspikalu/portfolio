@@ -1,0 +1,170 @@
+@import "config";
+
+%links-nav {
+  ul {
+    @include flex-center;
+    gap: 1.1rem;
+    li > a {
+      color: $white;
+    }
+  }
+}
+%links-sideNav {
+  ul {
+    @include flex-center;
+    flex-direction: column;
+    gap: 2.1rem;
+    li > a {
+      color: $white;
+    }
+  }
+}
+@keyframes slideIN {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.nav {
+  @include flex-center;
+  justify-content: space-between;
+  padding-inline: 1.8rem;
+  padding-block: 1rem;
+  width: 100%;
+  background-color: $bg-black;
+  color: $white;
+  min-height: 4rem;
+  z-index: 2;
+  box-shadow: 1px 3px 5px rgba($color: #000000, $alpha: 0.5);
+
+  &__social {
+    @extend %links-nav;
+  }
+
+
+  &__links {
+    display: none;
+    @extend %links-nav;
+    ul > li > a {
+      text-decoration: none;
+      border: 1px solid $white;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      border-radius: 8px;
+      font-weight: 1rem;
+
+      &:hover {
+        background-color: white;
+        color: $bg-black;
+      }
+    }
+  }
+
+  .bar_container {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 3rem;
+    padding-block: 10px;
+    cursor: pointer;
+
+    .bar {
+      width: 3rem;
+      height: 5px;
+      border-radius: 10px;
+      background-color: white;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        @extend .bar;
+        transform: translateY(-17px);
+      }
+      &::before {
+        content: " ";
+        display: inline-block;
+        @extend .bar;
+        transform: translateY(11px);
+      }
+    }
+  }
+}
+
+.sideNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #333;
+  opacity: 100;
+  width: 50vw;
+  padding-block: 2.5rem;
+  gap: 2rem;
+  @include flex-center;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translateX(100%);
+  z-index: 100;
+
+  .nav__social {
+    @include flex-center;
+  }
+  .nav__links {
+    @include flex-center;
+    @extend %links-sideNav;
+  }
+  .closeHamburger {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+
+    .close {
+      margin-left: auto;
+      margin-right: 15px;
+      width: 3rem;
+      height: 5px;
+      border-radius: 10px;
+      background-color: white;
+      transform: rotate(45deg);
+
+      &::after {
+        content: " ";
+        @extend .close;
+        display: inline-block;
+        transform: rotate(90deg) translateX(-10px);
+      }
+    }
+  }
+
+  &.open {
+    animation: slideIn 0.4s ease-in-out;
+    animation-delay: 0.2s;
+    transform: translateX(0%);
+  }
+}
+
+.githubIcon {
+  width: 2rem;
+  aspect-ratio: 1 /1;
+  fill: white;
+  border-radius: 50%;
+  padding: 1px;
+
+  &:hover {
+    fill: black;
+    background-color: white;
+    padding: 5px;
+  }
+}
+.linkedinIcon,
+.xIcon {
+  @extend .githubIcon;
+  border-radius: 0;
+
+  &:hover {
+    border-radius: 50%;
+  }
+}

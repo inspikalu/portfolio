@@ -1,0 +1,44 @@
+@import "config";
+
+@include media-md {
+  .nav {
+    &__social,
+    &__links {
+      display: block;
+    }
+  }
+  .bar_container {
+    display: none;
+  }
+
+  .about {
+    flex-direction: row;
+
+    .leftSide {
+      width: 40%;
+    }
+    .rightSide {
+      width: 60%;
+
+      .buttons {
+        width: 60%;
+      }
+    }
+  }
+
+  .tools {
+    grid-template-columns: repeat(3, 1fr);
+
+    h2 {
+      grid-column: span 3;
+    }
+    &__tool {
+      //grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "contact contact" "leftSide rightSide";
+  }
+}

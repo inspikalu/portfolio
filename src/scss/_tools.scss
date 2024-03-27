@@ -1,0 +1,45 @@
+@import "config";
+
+.tools{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-block: 5rem;
+  gap: 2rem;
+
+  h2{
+    color: white;
+    font-size: 2rem;
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  &__tool{
+
+    &:hover img{
+      transform: scale(1.2);
+    }
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    span{
+      color: $text-color-grey;
+      font-size: 2rem;
+    }
+
+    img[alt='HTML']{
+      border-radius: 50%;
+    }
+    img{
+      aspect-ratio: 1 / 1;
+      width: clamp(3rem, 7rem, 5rem);
+    }
+  }
+}

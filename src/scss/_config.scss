@@ -1,0 +1,54 @@
+// Colors
+$bg-black: #101630;
+$text-color-grey: #C0C0C0;
+//$text-color-grey: #b6afff;
+//$text-color-grey: #44495f;
+$white: #fff;
+$blue: #4db8dc;
+
+// Resets
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin flex-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin media-xsm() {
+  @media screen and (min-width: 575px) {
+    @content;
+  }
+}
+@mixin media-sm() {
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+@mixin media-md() {
+  @media screen and (min-width: 790px) {
+    @content;
+  }
+}
+@mixin media-lg() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-lg() {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+textarea {
+  resize: none;
+}

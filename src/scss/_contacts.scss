@@ -1,0 +1,94 @@
+@import "config";
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "contact" "leftSide" "rightSide";
+  gap: 1.5rem;
+  padding: 25px 15px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(71, 53, 193, 0.83),
+    rgba(79, 155, 215, 0.91)
+  );
+  //background-image: linear-gradient(135deg, #4735c1, #4f9bd7);
+  & > h2 {
+    grid-area: contact;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  &__leftSide {
+    grid-area: leftSide;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 0.8rem;
+    & > h2 {
+      color: white;
+    }
+    p {
+      color: #b6afff;
+    }
+
+    &__contact {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      img {
+        aspect-ratio: 1/1;
+        width: clamp(1rem, 2rem, 1.5rem);
+        background-color: #4db8dc;
+        border-radius: 50%;
+      }
+      a {
+        color: $text-color-grey;
+      }
+    }
+  }
+
+  &__rightSide {
+    grid-area: rightSide;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.7rem;
+    border-radius: 12px;
+    background-image: linear-gradient(
+      -448deg,
+      rgba(71, 53, 193, 0.83),
+      rgba(79, 155, 215, 0.91)
+    );
+    input,
+    textarea {
+      background-color: #101532;
+      border: none;
+      border-radius: 6px;
+      padding: 1rem;
+      color: $text-color-grey;
+      width: 100%;
+      font: inherit;
+    }
+    button {
+      margin-block: 1rem;
+      width: 30%;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #101532;
+      font: inherit;
+      color: white;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background-color: darken(#101532, 10%);
+      }
+    }
+  }
+}

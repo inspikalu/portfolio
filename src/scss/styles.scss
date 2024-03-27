@@ -1,0 +1,20 @@
+@import "config";
+@import "nav";
+@import "hero";
+@import "about";
+@import "projects";
+@import "tools";
+@import "contacts";
+
+body {
+  min-height: 100vh;
+  background-color: $bg-black;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style-type: none;
+}
+
+@import "responsive";
