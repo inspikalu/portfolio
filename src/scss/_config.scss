@@ -28,21 +28,25 @@ $blue: #4db8dc;
     @content;
   }
 }
+
 @mixin media-sm() {
   @media screen and (min-width: 640px) {
     @content;
   }
 }
+
 @mixin media-md() {
   @media screen and (min-width: 790px) {
     @content;
   }
 }
+
 @mixin media-lg() {
   @media screen and (min-width: 1024px) {
     @content;
   }
 }
+
 @mixin media-lg() {
   @media screen and (min-width: 1280px) {
     @content;

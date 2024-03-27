@@ -17,6 +17,7 @@
     .leftSide {
       width: 40%;
     }
+
     .rightSide {
       width: 60%;
 
@@ -32,6 +33,7 @@
     h2 {
       grid-column: span 3;
     }
+
     &__tool {
       //grid-template-columns: repeat(3, 1fr);
     }

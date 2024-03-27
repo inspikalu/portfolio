@@ -1,6 +1,6 @@
 @import "config";
 
-.tools{
+.tools {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -9,18 +9,19 @@
   margin-block: 5rem;
   gap: 2rem;
 
-  h2{
+  h2 {
     color: white;
     font-size: 2rem;
     grid-column: span 2;
     text-align: center;
   }
 
-  &__tool{
+  &__tool {
 
-    &:hover img{
+    &:hover img {
       transform: scale(1.2);
     }
+
     align-self: center;
     justify-self: center;
     display: flex;
@@ -29,15 +30,16 @@
     align-items: center;
     gap: 1rem;
 
-    span{
+    span {
       color: $text-color-grey;
       font-size: 2rem;
     }
 
-    img[alt='HTML']{
+    img[alt='HTML'] {
       border-radius: 50%;
     }
-    img{
+
+    img {
       aspect-ratio: 1 / 1;
       width: clamp(3rem, 7rem, 5rem);
     }
