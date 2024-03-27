@@ -59,6 +59,8 @@ ul {
 
 .dontClick {
   pointer-events: none;
+  background-color: grey;
+  cursor: not-allowed;
 }
 
 @import "responsive";

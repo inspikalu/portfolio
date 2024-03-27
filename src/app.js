@@ -44,7 +44,7 @@ contactsForm.addEventListener('submit', (e) => {
             popUpMessage.innerHTML = `Email Sent Successfully, ${response ? response.text : ""}`
             popUp.classList.add('open')
             sendButton.classList.remove('dontClick')
-
+            contactsForm.reset();
         })
         .catch(error => {
             popUpMessage.innerHTML = `There was an error, ${error ? error : ""}`
