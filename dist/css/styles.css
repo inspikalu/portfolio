@@ -278,6 +278,9 @@ textarea {
   font-size: inherit;
   color: white;
   border: none;
+  width: 80%;
+  margin-inline: auto;
+  cursor: pointer;
 }
 .about .rightSide .buttons button:hover {
   transform: translateY(-10px);
@@ -318,6 +321,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-inline: 2rem;
 }
 .projects > h2 {
   color: #fff;
@@ -331,10 +335,13 @@ textarea {
   padding: 0.5rem;
 }
 .projects__container__item {
-  background-color: #36454F;
+  background-color: #36454f;
   color: #fff;
   padding: 1rem;
   border-radius: 8px;
+}
+.projects__container__item h3 {
+  margin-block: 1rem;
 }
 .projects__container__item img {
   width: 100%;
@@ -612,7 +619,10 @@ textarea {
     width: 60%;
   }
   .about .rightSide .buttons {
-    width: 60%;
+    width: 50%;
+  }
+  .about .rightSide .buttons button {
+    margin-inline: 0;
   }
   .tools {
     grid-template-columns: repeat(3, 1fr);

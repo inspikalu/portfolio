@@ -22,7 +22,10 @@
       width: 60%;
 
       .buttons {
-        width: 60%;
+        width: 50%;
+        button {
+          margin-inline: 0;
+        }
       }
     }
   }

@@ -5,8 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-inline: 2rem;
 
-  &>h2{
+  & > h2 {
     color: $white;
     font-size: 2rem;
     margin-block: 1rem;
@@ -18,10 +19,13 @@
     padding: 0.5rem;
 
     &__item {
-      background-color:  #36454F;
+      background-color: #36454f;
       color: $white;
       padding: 1rem;
       border-radius: 8px;
+      h3 {
+        margin-block: 1rem;
+      }
       img {
         width: 100%;
         height: auto;
@@ -44,10 +48,10 @@
           position: relative;
           overflow: hidden;
 
-          &.repoLink::before{
+          &.repoLink::before {
             content: "Github Repo";
           }
-          &.liveLink::before{
+          &.liveLink::before {
             content: "Live Site";
           }
           &::before {
@@ -65,8 +69,6 @@
           &:hover::before {
             top: 0; /* Move the pseudo-element to cover the button */
           }
-
-
         }
       }
     }

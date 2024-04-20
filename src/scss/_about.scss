@@ -56,6 +56,9 @@
         font-size: inherit;
         color: white;
         border: none;
+        width: 80%;
+        margin-inline: auto;
+        cursor: pointer;
 
         &:hover {
           transform: translateY(-10px);
